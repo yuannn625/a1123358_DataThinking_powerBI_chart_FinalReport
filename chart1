@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Power BI 個人專案 - A1123358 葉于安</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    .powerbi-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Power BI 個人專案展示</h1>
+  <h2>A1123358 葉于安</h2>
+  <div class="powerbi-container">
+    <iframe title="A1123358_葉于安_PowerBI個人專案"
+            width="600"
+            height="373.5"
+            src="https://app.powerbi.com/view?r=eyJrIjoiZmVmYzM1NDQtYzUwZC00NjRhLWJlNTAtNGJhZjhlYTkwZTVhIiwidCI6IjVhNDg0OTUzLTc3ZWYtNDJlYy05MGNmLTJmNGUxMDM3ZmZjNyIsImMiOjEwfQ%3D%3D"
+            frameborder="0"
+            allowFullScreen="true">
+    </iframe>
+  </div>
+</body>
+</html>
