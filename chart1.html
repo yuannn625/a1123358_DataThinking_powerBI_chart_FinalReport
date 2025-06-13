@@ -45,6 +45,23 @@
       border-left: 5px solid #4A90E2;
       margin-top: 20px;
     }
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #4A90E2;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 30px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+    #backToTop:hover {
+      background-color: #2c6ecf;
+    }
   </style>
 </head>
 <body>
@@ -68,7 +85,7 @@
       <strong>Data：</strong> 每日每站雨量數據。<br>
       <strong>Information：</strong> 視覺化呈現出每日與縣市的關聯。<br>
       <strong>Knowledge：</strong> 觀察得知某縣市在某幾天特別多雨，例如花蓮縣在 2 月某日暴增。<br>
-      <strong>Wisdom：</strong> 可進一步用於氣候風險評估、政策制定（如依據這個異常事件，花蓮縣政府提報內政部調整「山坡地災害潛勢區域」圖表，在非傳統防災月份（如春季）也設置警戒範圍）。
+      <strong>Wisdom：</strong> 可進一步用於氣候風險評估、政策制定。
     </div>
   </section>
 
@@ -76,28 +93,32 @@
     <h2>圖表二：緞帶圖 + 縣市卡片圖（Grid）</h2>
     <iframe title="p3" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiNzdlNzE5YmEtZmQwYy00NWE5LWJmYjAtYTM2MmE2OTBkYTlhIiwidCI6IjVhNDg0OTUzLTc3ZWYtNDJlYy05MGNmLTJmNGUxMDM3ZmZjNyIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
     <p><strong>研究問題（Research Question）：</strong> 哪些測站在不同月份都持續有降雨？哪些縣市的雨量貢獻最多？是否存在穩定的高雨區？</p>
-    <p><strong>互動模組設計：</strong> 上圖是緞帶圖（Ribbon Chart）：以 StationName 為 x 軸，堆疊五個月份的降雨表現。 下圖為卡片圖（Grid）：每個方塊代表一個縣市，大小代表總雨量，顏色依照縣市區分。 可透過月份篩選功能觀察「變化」，例如 5 月是否比 1 月普遍雨量大。</p>
+    <p><strong>互動模組設計：</strong> 上圖是緞帶圖（Ribbon Chart）：以 StationName 為 x 軸，堆疊五個月份的降雨表現。 下圖為卡片圖（Grid）：每個方塊代表一個縣市，大小代表總雨量，顏色依照縣市區分。 可透過月份篩選功能觀察「變化」。</p>
     <div class="dikw">
       <strong>DIKW 詮釋：</strong><br>
       <strong>Data：</strong> 各月各站雨量 + 所屬縣市。<br>
       <strong>Information：</strong> 站點月雨量堆疊 + 縣市空間分佈。<br>
-      <strong>Knowledge：</strong> 能識別出「全年皆濕」的區域，或「雨量集中在某月」的異常點。<br>
-      <strong>Wisdom：</strong> 制定防洪期程、農耕時間調整、區域水資源分配建議等。
+      <strong>Knowledge：</strong> 能識別出全年皆濕區域或異常月份。<br>
+      <strong>Wisdom：</strong> 支援防洪規劃與水資源分配。
     </div>
   </section>
 
   <section>
     <h2>圖表三：地圖 + 測站雨量直方圖</h2>
     <iframe title="p5" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZjNjNjhlOGMtMWYyMC00NjIxLThjYjYtMTNkYjMyMWY4MzBjIiwidCI6IjVhNDg0OTUzLTc3ZWYtNDJlYy05MGNmLTJmNGUxMDM3ZmZjNyIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
-    <p><strong>研究問題（Research Question）：</strong> 哪些地區的測站總雨量最多？地理位置與降雨量是否存在空間集中性？是否能透過地圖找到降雨熱點？</p>
-    <p><strong>互動模組設計：</strong> 左圖為互動地圖：每個泡泡代表一個測站，顏色代表縣市，大小代表累積雨量。 右圖為直方圖：按測站總雨量排序，幫助辨別「降雨最多的測站」。</p>
+    <p><strong>研究問題（Research Question）：</strong> 哪些地區的測站總雨量最多？是否能透過地圖找到降雨熱點？</p>
+    <p><strong>互動模組設計：</strong> 左為互動地圖：泡泡顯示站點、顏色為縣市、大小為雨量；右為排序直方圖。</p>
     <div class="dikw">
       <strong>DIKW 詮釋：</strong><br>
-      <strong>Data：</strong> 測站位置 + 累積降雨量。<br>
-      <strong>Information：</strong> 地圖與長條圖揭示「地點」與「雨量」的關係。<br>
-      <strong>Knowledge：</strong> 可以發現高雨量集中在東部與南部的特定測站。<br>
-      <strong>Wisdom：</strong> 協助政府設計排水設施配置、氣候敏感地區通報、農業防災策略。
+      <strong>Data：</strong> 測站位置 + 累積雨量。<br>
+      <strong>Information：</strong> 顯示地理與雨量關係。<br>
+      <strong>Knowledge：</strong> 找出高雨集中區域。<br>
+      <strong>Wisdom：</strong> 協助通報、防災、農業規劃。
     </div>
   </section>
+
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    回頂端
+  </button>
 </body>
 </html>
