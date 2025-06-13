@@ -2,36 +2,45 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
+  <title>A1123358 葉于安 - Power BI 個人專案</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Power BI 個人專案 - A1123358 葉于安</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f9f9f9;
       margin: 0;
-      padding: 20px;
-      background-color: #f4f4f4;
+      padding: 40px;
       text-align: center;
     }
     h1 {
-      color: #333;
+      color: #2e2e2e;
+      margin-bottom: 10px;
     }
-    .powerbi-container {
+    h2 {
+      color: #666;
+      margin-bottom: 30px;
+    }
+    .report-container {
       display: flex;
       justify-content: center;
-      margin-top: 30px;
+    }
+    iframe {
+      border: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
   <h1>Power BI 個人專案展示</h1>
   <h2>A1123358 葉于安</h2>
-  <div class="powerbi-container">
+  <div class="report-container">
     <iframe title="A1123358_葉于安_PowerBI個人專案"
             width="600"
             height="373.5"
             src="https://app.powerbi.com/view?r=eyJrIjoiZmVmYzM1NDQtYzUwZC00NjRhLWJlNTAtNGJhZjhlYTkwZTVhIiwidCI6IjVhNDg0OTUzLTc3ZWYtNDJlYy05MGNmLTJmNGUxMDM3ZmZjNyIsImMiOjEwfQ%3D%3D"
             frameborder="0"
-            allowFullScreen="true">
+            allowfullscreen="true">
     </iframe>
   </div>
 </body>
